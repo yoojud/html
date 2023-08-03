@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>책 등록 화면 만들기</title>
+    <style>
+        .container {
+            width: 700px;
+            border: 1px solid #cccccc;
+            padding: 30px;
+            background-color: #f0f8ff;
+            margin: 0 auto;
+        }
+
+        .lbl {
+            width: 100px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3>책 등록 화면</h3>
+            <div style="margin-bottom: 5px;">
+                <label class="lbl">책 제목</label>
+                <input type="text" placeholder="제목입력"/>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <label class="lbl">책 내용</label>
+                <textarea rows="6" placeholder="내용입력"></textarea>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <label class="lbl">저자</label>
+                <input type="text" placeholder="저자입력" style="width: 150px;"/>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <label class="lbl">가격</label>
+                <input type="number" placeholder="가격입력" style="width: 70px;"/>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <label class="lbl">출판사</label>
+                <select>
+                    <option value="default">출판사</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <label class="lbl">등록수량</label>
+                <input type="number" style="width: 30px;"/>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <label class="lbl">등록일자</label>
+                <input type="date"/>
+            </div>
+            <div>
+                <label class="lbl"></label>
+                <input type="submit" value="등록버튼"/>
+                <a href="home.html"><button>홈으로</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

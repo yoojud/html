@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <style>
+        .container {
+            width: 700px; 
+            border: 1px solid #cccccc; 
+            padding: 30px;
+        }
+
+        .lbl {
+            width: 100px; 
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="width: 700px; border: 1px solid #cccccc; padding: 30px;">
+    <div class="container">
         <div>
-            <h2>회원가입</h2>
-            <hr/>
+            <h2>회원가입</h2><hr/>
         </div>
         <div style="margin-bottom: 5px;">
-            <label style="width: 100px; display: inline-block;">아이디</label>
-            <input type="text" placeholder="아이디"/>
+            <label class="lbl">아이디</label>
+            <input type="text" placeholder="아이디" id="userid"/>
             <label>중복확인</label>  
         </div>
         <div style="margin-bottom: 5px;">
-            <label style="width: 100px; display: inline-block;">암호</label>
-            <input type="password" placeholder="암호"/>
+            <label class="lbl">암호</label>
+            <input type="password" placeholder="암호" id="userpw"/>
         </div>
         <div style="margin-bottom: 5px;">
-            <label style="width: 100px; display: inline-block;">암호확인</label>
-            <input type="password" placeholder="암호확인"/>
+            <label class="lbl">암호확인</label>
+            <input type="password" placeholder="암호확인" id="userpw1"/>
         </div>
         <div style="margin-bottom: 5px;">
-            <label style="width: 100px; display: inline-block;">이름</label>
-            <input type="text" placeholder="이름"/>
+            <label class="lbl">이름</label>
+            <input type="text" placeholder="이름" id="username"/>
         </div>
         <div style="margin-bottom: 5px;">
-            <label style="width: 100px; display: inline-block;">이메일</label>
-            <input type="text" placeholder="이메일"/>
+            <label class="lbl">이메일</label>
+            <input type="text" placeholder="이메일" id="usermail"/>
             <label>@</label>
             <select>
                 <option value="naver.com">naver.com</option>
@@ -39,14 +50,68 @@
             </select>
         </div>
         <div style="margin-bottom: 5px;">
-            <label style="width: 100px; display: inline-block;">나이</label>
-            <input type="number" placeholder="나이"/>
+            <label class="lbl">나이</label>
+            <input type="number" placeholder="나이" id="userage"/>
         </div>
         <div>
-            <label style="width: 100px; display: inline-block;"></label>
-            <input type="button" value="회원가입"/>
+            <label class="lbl"></label>
+            <button onclick="handleJoin()">회원가입</button>
         </div>
-    </div>    
-</body>
+    </div> 
+    
+    <script>
+        function handleJoin() {
+            const userid = document.getElementById('userid');
+            //console.log(userid.value);
+            if(userid.value === '') {
+                alert('아이디를 입력하세요.');
+                userid.focus();
+                return;
+            }
 
+            const userpw = document.getElementById('userpw');
+            if(userpw.value === '') {
+                alert('암호를 입력하세요.');
+                userpw.focus();
+                return;
+            }
+
+            const userpw1 = document.getElementById('userpw1');
+            if(userpw1.value === '') {
+                alert('암호를 확인하세요.');
+                userpw.focus();
+                return;
+            }
+
+            if(userpw1.value !== userpw.value) {
+                alert('암호가 다릅니다.');
+                userpw1.focus();
+                return;
+            }
+
+            const username = document.getElementById('username');
+            if(username.value === '') {
+                alert('이름을 입력하세요.');
+                username.focus();
+                return;
+            }
+
+            const usermail = document.getElementById('usermail');
+            if(usermail.value === '') {
+                alert('이메일을 입력하세요.');
+                usermail.focus();
+                return;
+            }
+
+            const userage = document.getElementById('userage');
+            if(userage.value === '') {
+                alert('나이를 입력하세요.');
+                userage.focus();
+                return;
+            }
+            
+            alert('회원가입 되었습니다.');
+        }
+    </script>
+</body>
 </html>

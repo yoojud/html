@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 실습</title>
+    <style>
+        .container {
+            width: 700px;
+            border: 1px solid #cccccc;
+            padding: 30px;
+            background-color: rgb(238, 248, 253);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3>form 실습</h3>
+            <div>
+                <input type="text" placeholder="아이디입력" style="width: 320px;"/> 아이디, 이름, 이메일 (문자+숫자)
+            </div>
+            <div>
+                <input type="password" placeholder="암호입력"/> 
+            </div>
+            <div>
+                <input type="number" placeholder="나이입력"/> 숫자만 가능
+            </div>
+            <div>
+                <textarea rows="6" placeholder="내용입력"></textarea> 여러줄 입력 
+            </div>
+            <div>
+                <input type="radio" name="gender" value="남"/>남
+                <input type="radio" name="gender" value="여"/>여 택1
+            </div>
+            <div>
+                <input type="checkbox"/>html
+                <input type="checkbox"/>css
+                <input type="checkbox"/>js
+                <input type="checkbox"/>java 여러개 선택
+            </div>
+            <div>
+                <select>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="naver.com">naver.com</option> 택1
+                </select>
+            </div>
+            <div>
+                <input type="color"/> 색상
+            </div>
+            <div>
+                <input type="file" multiple/> 파일 여러개 선택
+            </div>
+            <div>
+                <input type="date"/> 날짜
+            </div>
+            <div>
+                <input type="range" min="1" max="10"/> 범위
+            </div>
+        </div>
+    </div>
+</body>
+</html>
