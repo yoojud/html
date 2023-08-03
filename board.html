@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>board 구현하기</title>
+    <style>
+        .container {
+            width: 900px;
+            margin: 0px auto;
+            border: 1px solid #cccccc;
+            padding: 25px;
+        }
+
+        .lbl {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .mgb {
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>글쓰기</h2>
+        <div class="mgb">
+            <label class="lbl">작성자</label>
+            <input type="text"/>
+        </div>
+        <div class="mgb">
+            <label class="lbl">내용</label>
+            <textarea rows="5" cols="21"></textarea>
+        </div>
+        <div class="mgb">
+            <label class="lbl">작성자</label>
+            <input type="text"/>
+        </div>
+        <div>
+            <input type="submit" value="글쓰기"/>
+            <input type="button" value="목록"/>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈화면</title>
+    <style>
+        .container {
+            width   : 900px;
+            margin: 0px auto;
+            border: 1px solid #cccccc;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 200px 500px 200px; /* 가로의 크기 설정 */
+            grid-template-rows: 100px 300px 100px; /* 높이 설정 */
+        }
+
+        .item {
+            border: 1px solid #cccccc;
+        }
+
+        .item:nth-child(1) {
+            grid-column-start   : 1;
+            grid-column-end : 4;
+        }
+
+        .item:nth-child(5) {
+            grid-column-start   : 1;
+            grid-column-end : 4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>test</h2>
+        <div class="grid">
+            <div class="item">1</div>
+            <div class="item">2
+                <a href="join.html"><button>회원가입</button></a>
+                <a href="join1.html"><button>회원가입1</button></a>
+                <a href="market.html"><button>마켓</button></a>
+            </div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+
+
+        </div>
+    </div>
+</body>
+</html>

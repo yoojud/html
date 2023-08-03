@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마켓</title>
+    <style>
+        .container {
+            border  : 1px solid #cccccc;
+            width   : 800px;
+            margin  : 0px auto 0px auto;
+            display : grid;
+            grid-template-columns   : 1fr 1fr 1fr; /*1:1:1로 열 생성*/
+            grid-auto-rows  : minmax(250px, auto); /*최소 높이*/
+        }
+        .box {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #cccccc;
+        }
+        a {
+            text-decoration: none;
+            color: #111111;
+        }
+        a:hover .box {
+            border: 1px solid red;
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="market2.html">
+            <div class="box">
+                <img src="./imgs/peach.jpg" style="width: 100%; height: 100%;"/>
+                <p>peach</p>
+            </div>
+        </a>
+        <a href="market2.html">
+            <div class="box">
+                <img src="kiwi.jpg" style="width: 100%;"/>
+                <p>kiwi</p>
+            </div>
+        </a>
+        <div class="box">
+            <img src="./imgs/avocado.jpg" style="width: 100%; height: 250px;"/>
+            <p>avocado</p>
+        </div>
+        <div class="box">
+            <img src="./imgs/apple.jpg" style="width: 100%;"/>
+            <p>apple</p>
+        </div>
+        <div class="box">
+            <img src="./imgs/cherry.jpg" style="width: 100%;"/>
+            <p>cherry</p>
+        </div>
+        <div class="box">
+            <img src="./imgs/strawberry.jpg" style="width: 100%;"/>
+            <p>strawberry</p>
+        </div>
+    </div>
+
+</body>
+</html>
