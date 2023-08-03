@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 배치하기</title>
+    <style>
+        .container {
+            width: 900px;
+            border: 1px solid #cccccc;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: minmax(250px, auto);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 200px 500px 200px;
+            grid-template-rows: 100px 300px 100px;
+        }
+
+        .item {
+            border: 1px solid #fc0101;
+        }
+
+        .item:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .item:nth-child(5) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+        </div>
+    </div>
+</body>
+</html>
