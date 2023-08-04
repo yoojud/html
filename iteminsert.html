@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>item</title>
+    <style>
+        .container {
+            width: 500px;
+            border: 1px solid #cccccc;
+            padding: 30px;
+        }
+
+        .lbl {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .margin {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>물품등록</h3><hr/>
+        <div class="margin">
+            <label class="lbl">물품번호</label>
+            <input type="number" id="no"/>
+        </div>
+        <div class="margin">
+            <label class="lbl">물품명</label>
+            <input type="text" id="name"/>
+        </div>
+        <div class="margin">
+            <label class="lbl">물품설명</label>
+            <textarea rows="6" id="content"></textarea>
+        </div>
+        <div class="margin">
+            <label class="lbl">가격</label>
+            <input type="number" id="price" style="width: 120px;"/>원
+        </div>
+        <div class="margin">
+            <label class="lbl">수량</label>
+            <input type="number" id="quantity" style="width: 100px;"/>개
+        </div>
+        <div class="margin">
+            <label class="lbl">이미지</label>
+            <img src="./imgs/noimage.jpg" id="image" style="width: 100px;"/>
+            <input type="file" id="file" onchange="handleImage(this)"/><hr/>
+        </div>
+        <div>
+            <label class="lbl"></label>
+            <button onclick="handleInsert()">등록하기</button>
+        </div>
+    </div>
+
+    <script>
+        function handleImage(e) {
+            console.log(e);
+            console.log(e.files);
+            if(e.files.length <= 0) { //첨부x
+                image.src = './imgs/noimage.jpg';
+            }
+            else {
+                image.src = URL.createObjectURL(e.files[0]);
+            }
+        }
+
+        const handleInsert = () => { // function handleInsert()
+            const no = document.getElementById('no');
+            const name = document.getElementById('name');
+            const content = document.getElementById('content');
+            const price = document.getElementById('price');
+            const quantity = document.getElementById('quantity');
+
+            //value or value.length
+            if(no.value.length < 1) {
+                alert('물품번호를 입력하세요.');
+                no.focus();
+                return;
+            }
+
+            if(name.value === '') {
+                alert('물품명을 입력하세요.');
+                name.focus();
+                return;
+            }
+
+            if(content.value === '') {
+                alert('물품설명을 입력하세요.');
+                content.focus();
+                return;
+            }
+
+            if(price.value.length <= 0) {
+                alert('가격을 입력하세요.');
+                price.focus();
+                return;
+            }
+
+            if(quantity.value.length <= 0) {
+                alert('수량을 입력하세요.');
+                quantity.focus();
+                return;
+            }
+            
+            alert('등록이 가능한 시점');
+        }
+        
+    </script>
+</body>
+</html>

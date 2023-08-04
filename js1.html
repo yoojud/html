@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 실습</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            border: 1px solid #cccccc;
+            padding: 30px;
+        }
+        .item {
+            border: 1px solid #cccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>javascript 실습</h3>
+        <div class="item">
+            1. 실시간 아이디 중복 확인용 <input type="text" id="text" placeholder="추가할값" onkeyup="handleKeyup()"/>
+        </div>
+        <div class="item">
+            2. 체크박스의 체크 확인용(약관동의) <input type="checkbox" id="chk"/>약관동의
+            <button onclick="handleCheck()">체크유무확인용</button>
+        </div>
+        <div class="item">
+            3. 체크박스 여러개
+            <input type="checkbox" value="html" class="chk1"/>html
+            <input type="checkbox" value="css" class="chk1"/>css
+            <input type="checkbox" value="javascript" class="chk1"/>javascript
+            <button onclick="handleCheckMulti()">체크박스유무확인용</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function handleKeyup() {
+            const txt = document.getElementById('text');
+            console.log(txt.value);
+        }
+        
+        function handleCheck() {
+            const chk = document.getElementById('chk');
+            if(chk.checked === true) {
+                alert('체크박스 체크됨.');
+            }
+            else {
+                alert('체크박스 체크 안됨.');
+            }
+        }
+
+        function handleCheckMulti() {
+            const chk1 = document.getElementsByClassName('chk1');
+            console.log(chk1);
+            for(let tmp of chk1) {
+                if(tmp.checked === true) {
+                    console.log(tmp.value);
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

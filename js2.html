@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js2</title>
+    <style>
+        .container {
+            width   : 700px;
+            margin  : 0px auto 0px auto;
+            border  : 1px solid #cccccc;
+            padding : 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #bcd9f04d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>물품번호</th>
+                    <th>물품명</th>
+                    <th>가격</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody">
+                <tr>
+                    <td>1</td>
+                    <td>사과</td>
+                    <td>9870</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        function loadData() {
+            const data = {no:2, name:'바나나', price:4900};
+            console.log(data.no);
+            console.log(data.name);
+            console.log(data.price);
+
+            const data1 = [
+                {no:2, name:'바나나2', price:4900},
+                {no:4, name:'바나나3', price:4900},
+                {no:5, name:'바나나4', price:4900}
+            ];
+
+            console.log(data1[0].name);
+
+            const tbody = document.getElementById('tbody');
+
+            for (let tmp of data1) {
+                console.log(tmp.no, tmp.name, tmp.price);
+
+                tbody.innerHTML +=
+                    `<tr>` +
+                        `<td>${tmp.no}</td>`+
+                        `<td>${tmp.name}</td>`+
+                        `<td>${tmp.price}</td>`+
+                    `</tr>`;
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
